@@ -6,13 +6,13 @@ plugins {
 
 android {
     namespace = "com.yasinal.ydialogs"
-    compileSdk = 34
+    compileSdk = 35
 
 
 
 
     defaultConfig {
-        minSdk = 24
+        minSdk = 26
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles("consumer-rules.pro")
@@ -34,6 +34,17 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.1"
+    }
+    packaging {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
+    }
 }
 
 publishing {
@@ -44,7 +55,7 @@ publishing {
             }
             groupId = "com.github.yasinkt"
             artifactId = "YDialogs"
-            version = "1.0.2"
+            version = "1.0.3"
         }
     }
 }
