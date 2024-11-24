@@ -8,6 +8,9 @@ android {
     namespace = "com.yasinal.ydialogs"
     compileSdk = 34
 
+
+
+
     defaultConfig {
         minSdk = 24
 
@@ -30,6 +33,19 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("release") {
+            afterEvaluate {
+                from(components["release"])
+            }
+            groupId = "com.github.yasinkt"
+            artifactId = "YDialogs"
+            version = "1.0.2"
+        }
     }
 }
 
