@@ -8,9 +8,6 @@ android {
     namespace = "com.yasinal.ydialogs"
     compileSdk = 35
 
-
-
-
     defaultConfig {
         minSdk = 26
 
@@ -55,7 +52,7 @@ publishing {
             }
             groupId = "com.github.yasinkt"
             artifactId = "YDialogs"
-            version = "1.0.3"
+            version = "1.0.6"
         }
     }
 }
